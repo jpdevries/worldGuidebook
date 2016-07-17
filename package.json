@@ -1,0 +1,32 @@
+{
+  "name": "countrycapapp",
+  "version": "1.0.0",
+  "description": "get information on countries and capitals",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "get-concat": "npm install grunt-contrib-concat --save-dev",
+    "get-uglify": "npm install grunt-contrib-uglify --save-dev",
+    "get-watch": "npm install grunt-contrib-watch --save-dev",
+    "get-cssmin": "npm install grunt-contrib-cssmin --save-dev",
+    "grunt-addons": "npm run get-concat && npm run get-uglify && npm run get-watch && npm run get-cssmin",
+    "get-grunt": "npm install grunt && npm install grunt-cli && npm run grunt-addons",
+    "start": "npm run get-grunt"
+  },
+  "keywords": [
+    "census",
+    "capitals",
+    "countries",
+    "population",
+    "geography"
+  ],
+  "author": "Dominick Caponi <d.caponi1@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "gulp": "^3.9.1"
+  }
+}

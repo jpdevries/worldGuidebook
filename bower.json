@@ -1,0 +1,27 @@
+{
+  "name": "countrycapapp",
+  "description": "get information on countries and capitals",
+  "main": "index.js",
+  "authors": [
+    "Dominick Caponi <d.caponi1@gmail.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "census",
+    "capitals",
+    "countries",
+    "population",
+    "geography"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7"
+  }
+}

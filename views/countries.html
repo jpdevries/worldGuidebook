@@ -1,0 +1,24 @@
+<h2>COUNTRIES</h2>
+<br>
+<input type="text" ng-model="search" placeholder="Name"><br><br>
+<input type="text" ng-model="codeSearch" placeholder="Code/Abbreviation"><br><br>
+<table>
+    <tr>
+        <th>Country</th>
+        <th>Country Code</th>
+        <th>Capitol</th>
+        <th>Area (km<sup>2</sup>)</th>
+        <th>Population</th>
+        <th>Continent</th>
+    </tr>
+    <tbody>
+        <tr ng-repeat="country in countries | filter:{countryName:search, countryCode:codeSearch} | orderBy:'countryName'" ng-click="toDetails(country.countryName)">
+            <td>{{country.countryName}}</td>
+            <td>{{country.countryCode}}</td>
+            <td>{{country.capital}}</td>
+            <td>{{country.areaInSqKm | number}}</td>
+            <td>{{country.population | number}}</td>
+            <td>{{country.continent}}</td>
+        </tr>
+    </tbody>
+</table>
