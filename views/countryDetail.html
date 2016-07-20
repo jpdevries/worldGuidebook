@@ -1,13 +1,20 @@
-<h1>COUNTRY DETAILS</h1><br>
-<h2>{{singleCountry.countryName}}</h2>
-<br>
-<p>Continent: {{singleCountry.continent}}</p>
-<p>Capitol: {{singleCountry.capital}}</p>
-<p>Population: {{singleCountry.population | number}} People</p>
-<p>Population of capitol: {{capitalFacts.population | number}} People</p>
-<p>Capitol Coordinates: LAT &mdash; {{capitalFacts.lat}} &nbsp; LONG &mdash; {{capitalFacts.lng}}</p>
-<p>Flag: <img ng-src="{{capitalFacts.flag}}"></p>
-<p>Map: <img ng-src="{{capitalFacts.map}}"></p>
-<br><p>Neighboring Countries</p><br>
-<p ng-repeat="neighbor in neighbors" ng-click="toDetails(neighbor.countryName)">{{neighbor.countryName}}</p>
-
+<div class="fluid-container">
+    <div class="row">
+        <div class="col-sm-6">
+        <h2 class="countryName">{{singleCountry.countryName}}</h2></div>
+        <div class="col-sm-6 flag-container"><img ng-src="{{capitalFacts.flag}}" class="flag"></div>
+        
+    </div>
+</div>
+    
+<div class="factTable">
+    <p>Continent: {{singleCountry.continent}}</p>
+    <p>Capitol: {{singleCountry.capital}}</p>
+    <p><img ng-src="{{capitalFacts.map}}"></p><br>
+    <p>Population: {{singleCountry.population | number}} People</p>
+    <p>Population of capitol: {{capitalFacts.population | number}} People</p>
+    <p>Capitol Coordinates: LAT &mdash; {{capitalFacts.lat}} &nbsp; LONG &mdash; {{capitalFacts.lng}}</p>
+    <br>
+    <p>Neighboring Countries</p>
+    <p ng-repeat="neighbor in neighbors" ng-click="toDetails(neighbor.countryName)">{{neighbor.countryName}}</p>
+</div>

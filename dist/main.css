@@ -40,6 +40,22 @@ table {
 	border-spacing: 0;
 }
 
+.headline,
+.headline:link,
+.search,
+.search:link{
+    text-decoration: none;
+    color: #000;
+    transition: linear color 0.2s;
+}
+.headline:hover,
+.headline:active,
+.search:hover,
+.search:active{
+    text-decoration: none !important;
+    color: #462aff;
+}
+
 .container{
     width: 95%;
     padding: 20px 10px;
@@ -67,4 +83,43 @@ button{
     background-color: #0645ff;
     padding: 10px;
     color: #fff;
+}
+
+@media only screen and (max-width: 767px){
+    .flag-container,
+    .countryName,
+    .headline,
+    .search{
+        text-align: center !important;
+        margin-bottom: 20px;
+    }
+}
+
+.flag{
+    height: 70px;
+    width: 120px;
+}
+
+.flag-container{
+    text-align: right;
+}
+
+.loading {
+  position:relative;
+  height:100vh;
+}
+
+.loading:before {
+  position:absolute;
+  content:"";
+  left:0;
+  bottom:0;
+  right:0;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,0.9) url('../gps.gif') no-repeat center center;
+}
+
+.search{
+    text-align: right;
 }

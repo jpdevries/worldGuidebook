@@ -5,10 +5,22 @@
         <link rel="stylesheet" type="text/css" href="dist/main.min.css">
     </head>
     <body ng-app="CCApp" ng-class="{loading: isLoading}">
-        <div class="container">
-            <h1>World Guide Book</h1>
-            <hr>
-            <div ng-view class="content"></div>
+        <div >
+            <div class="container">
+                <div class="fluid-container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <a ng-href="#/" class="headline"><h1>World Guide Book</h1></a>
+                        </div>
+                        <div class="col-sm-6">
+                            <a ng-href="#/countries" class="search"><h2>Search</h2></a>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+                <div ng-view class="content"></div>
+            </div>
         </div>
         
         

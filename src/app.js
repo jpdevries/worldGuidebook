@@ -37,7 +37,7 @@ app.run(['$rootScope', '$timeout', '$location', function($rootScope, $timeout, $
         if($location.path() != '/'){
             $timeout(function(){
                 $rootScope.isLoading = false;
-            }, 2000);
+            }, 1500);
         }
     });
 }]);
@@ -104,7 +104,7 @@ app.factory('capitalFacts', ['$location', '$http', function($location, $http){
     }
 }]);
 
-app.factory('neighborsService', ['$location', '$http', function($location, $http){
+app.factory('neighborsService', ['$location', '$http', '$routeParams', function($location, $http, $routeParams){
     var getNeighbors = function(singleCountry, callback){
         var reqURL = "http://api.geonames.org/neighboursJSON?geonameId="+singleCountry.geonameId+"&username=dcaponi";
         return $http.get(reqURL, {cache:true})
@@ -115,6 +115,7 @@ app.factory('neighborsService', ['$location', '$http', function($location, $http
         },
         function(status){
             console.error('Sorry bro, Error:' + status);
+            $location.path('countries/');
         });
     }
     
