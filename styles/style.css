@@ -26,7 +26,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {line-height: 1;}
+body {
+    line-height: 1;
+    background-image: url(../bodyBkg.jpg);
+}
 ol, ul {list-style: none;}
 blockquote, q {quotes: none;}
 
@@ -58,10 +61,12 @@ table {
 
 .container{
     width: 95%;
-    padding: 20px 10px;
+    padding: 50px;
     margin: auto;
     margin-top: 20px;
-    border: 1px solid #000;
+    background-image: url(../containerBkg.jpg);
+    background-size: cover;
+    background-position: center;
 }
 th, td, tr{
     padding: 15px;
@@ -71,7 +76,8 @@ th, td, tr{
     background-color: #000;
 }
 
-table td {
+table td,
+.neighbor{
     cursor: pointer;
 }
 

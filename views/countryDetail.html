@@ -16,5 +16,5 @@
     <p>Capitol Coordinates: LAT &mdash; {{capitalFacts.lat}} &nbsp; LONG &mdash; {{capitalFacts.lng}}</p>
     <br>
     <p>Neighboring Countries</p>
-    <p ng-repeat="neighbor in neighbors" ng-click="toDetails(neighbor.countryName)">{{neighbor.countryName}}</p>
+    <span class="neighbor" ng-repeat="neighbor in neighbors" ng-click="toDetails(neighbor.countryName)">{{neighbor.countryName}} &emsp;</span>
 </div>
