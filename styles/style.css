@@ -65,7 +65,6 @@ table {
     margin: auto;
     margin-top: 20px;
     background-image: url(../containerBkg.jpg);
-    background-size: cover;
     background-position: center;
 }
 th, td, tr{
@@ -123,7 +122,7 @@ button{
   right:0;
   top:0;
   z-index:1000;
-  background:rgba(255,255,255,0.9) url('../gps.gif') no-repeat center center;
+  background:rgba(0, 0, 0, 0.9) url('../gps.gif') no-repeat center center;
 }
 
 .search{
